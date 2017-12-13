@@ -34,7 +34,7 @@ node('jenkins-agent') {
 
     }finally{
         stage('Reporting') {
-            junit '/report.xml'
+            junit './report.xml'
         }
     }
 
