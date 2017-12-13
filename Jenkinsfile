@@ -29,7 +29,7 @@ node('jenkins-agent') {
         stage('Building') {
             echo 'Building...'
             sh 'npm install'
-            sh 'npm test-jenkins'
+            sh 'npm run test-jenkins'
         }
 
     }finally{
