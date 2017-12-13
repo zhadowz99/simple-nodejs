@@ -37,8 +37,6 @@ node('jenkins-agent') {
             junit '**/*.xml'
         }
     }
-    
-  }
 
   }catch(e){
 
