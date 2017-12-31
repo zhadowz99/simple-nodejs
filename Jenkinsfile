@@ -36,6 +36,13 @@ node('jenkins-agent') {
         stage('Reporting') {
             junit ' **/*.xml'
         }
+       stage('SonarQube analysis') {
+        
+        def scannerHome = tool 'SonarQube Scanner';
+        withSonarQubeEnv('SonarQube') {
+          sh "${scannerHome}/bin/sonar-scanner"
+        }
+       }
     }
 
   }catch(e){
